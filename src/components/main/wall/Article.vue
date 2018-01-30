@@ -45,4 +45,11 @@
     font-style: italic;
     color: grey;
   }
+  @media screen and (max-width: 600px) {
+    .article-popup {
+      width: 320px;
+      border-radius: 0;
+      left: calc(50% - 160px);
+    }
+  }
 </style>
