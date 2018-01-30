@@ -1,23 +1,20 @@
 <template>
-  <div class="article-popup">
-
-  </div>
+  <article class="article-popup">
+    <div class="article-popup__content">
+      <h3>{{content.title}}</h3>
+      <p class="article-popup__content__description">{{content.description}}</p>
+      <span>{{content.text}}</span>
+    </div>
+  </article>
 </template>
 
 
 <script>
   export default {
-    props: ['content']
+    props: ['content'],
     name: 'whatever',
     beforeCreate: function(){
       this.$store.dispatch('askArticles');
-    },
-    components: {
-    },
-    computed: {
-      content: function(){
-        return this.props.content;
-      },
     },
     data: function () {
       return {
@@ -30,8 +27,22 @@
 
 <style scoped>
   .article-popup {
-    position: absolute;
+    position: fixed;
     top: 100px;
-
+    left: calc(50% - 250px);
+    background: white;
+    width: 500px;
+    height: auto;
+    border-radius: 10px;
+    z-index: 2;
+  }
+  .article-popup__content {
+    padding: 10px;
+    font-family: sans-serif;
+  }
+  .article-popup__content__description {
+    margin-top: 0px;
+    font-style: italic;
+    color: grey;
   }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <article class="test-whatever">
-    Какая-то инфа
+    Какая-то информация
   </article>
 </template>
 

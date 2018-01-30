@@ -19,13 +19,6 @@ export default new Router({
           path: '',
           component: Wall,
           name: 'wall',
-          children: [
-            {
-              path: '/article',
-              component: Article,
-              name: 'article'
-            }
-          ]
         },
         {
           path: '/about',

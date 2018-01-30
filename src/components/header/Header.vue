@@ -55,9 +55,6 @@
     color: #ffe97f;
   }
   @media screen and (max-width: 420px) {
-    .test-header__navbar {
-      padding: 7px;
-    }
     .navbar__logo__content {
       font-size: 16px;
     }

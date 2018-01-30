@@ -14,9 +14,9 @@ const getters = {
 const actions = {
   askArticles({ state, commit }, article) {
     let me = this;
-    axios.get('@/../data.json')
+    axios.get('@/../../api/tiles.json')
       .then(function(response){
-        let data = response.data;
+        let data = response.data.tiles;
         me.commit('setArticles', data);
       }).catch(function(error){
         console.log(error)
